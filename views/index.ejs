@@ -1,0 +1,38 @@
+<%- include('partials/header') %> 
+<%- include('partials/home-navbar') %>
+<body>
+    
+    <div class="container">
+        <hr>
+        <div class="jumbotron">
+            <h1 class="display-4">Bem-vindo!</h1>
+            <p class="lead">Isso é um blog simples.</p>
+            <hr class="my-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, id? Dolore id libero unde! Officiis dolor consectetur eveniet. Autem odio amet, suscipit atque ipsam non.</p>
+            <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
+        </div>
+        <hr>
+        <% a.forEach(article => { %>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h2><%= article.title %></h2>
+                </div>
+                <div class="card-body">
+                    <a href="/<%= article.slug %>" class="btn btn-success">Ler Artigo</a>
+                </div>
+            </div>
+            <br>
+        <% }) %>
+
+
+        <div class="row">
+            <div class="col col-12">
+                <a href="/articles/page/2" class="btn btn-primary" style="float: right">Próxima Página</a>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+</body>
+<%- include ('partials/footer') %> 
